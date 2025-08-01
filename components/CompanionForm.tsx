@@ -49,15 +49,15 @@ const CompanionForm = () => {
   });
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
-        const companion = await createCompanion(values);
+    const companion = await createCompanion(values);
 
-        if(companion) {
-            redirect(`/companions/${companion.id}`);
-        } else {
-            console.log('Failed to create a companion');
-            redirect('/');
-        }
+    if (companion) {
+      redirect(`/companions/${companion.id}`);
+    } else {
+      console.log("Failed to create a companion");
+      redirect("/");
     }
+  };
 
   return (
     <Form {...form}>
@@ -87,16 +87,20 @@ const CompanionForm = () => {
               <FormLabel>Subject</FormLabel>
               <FormControl>
                 <Select
-                    onValueChange={field.onChange}
-                    value={field.value}
-                    defaultValue={field.value}
+                  onValueChange={field.onChange}
+                  value={field.value}
+                  defaultValue={field.value}
                 >
                   <SelectTrigger className="input capitalize">
                     <SelectValue placeholder="Select the Subject" />
                   </SelectTrigger>
                   <SelectContent>
                     {subjects.map((subject) => (
-                      <SelectItem className="capitalize" key={subject} value={subject}>
+                      <SelectItem
+                        className="capitalize"
+                        key={subject}
+                        value={subject}
+                      >
                         {subject}
                       </SelectItem>
                     ))}
@@ -132,20 +136,28 @@ const CompanionForm = () => {
               <FormLabel>Voice type</FormLabel>
               <FormControl>
                 <Select
-                    onValueChange={field.onChange}
-                    value={field.value}
-                    defaultValue={field.value}
+                  onValueChange={field.onChange}
+                  value={field.value}
+                  defaultValue={field.value}
                 >
                   <SelectTrigger className="input capitalize">
                     <SelectValue placeholder="Select the Voice" />
                   </SelectTrigger>
                   <SelectContent>
-                      <SelectItem className="capitalize" key={'male'} value={'male'}>
-                        Male
-                      </SelectItem>
-                      <SelectItem className="capitalize" key={'female'} value={'female'}>
-                        Female
-                      </SelectItem>
+                    <SelectItem
+                      className="capitalize"
+                      key={"male"}
+                      value={"male"}
+                    >
+                      Male
+                    </SelectItem>
+                    <SelectItem
+                      className="capitalize"
+                      key={"female"}
+                      value={"female"}
+                    >
+                      Female
+                    </SelectItem>
                   </SelectContent>
                 </Select>
               </FormControl>
@@ -161,20 +173,20 @@ const CompanionForm = () => {
               <FormLabel>Speaking Style</FormLabel>
               <FormControl>
                 <Select
-                    onValueChange={field.onChange}
-                    value={field.value}
-                    defaultValue={field.value}
+                  onValueChange={field.onChange}
+                  value={field.value}
+                  defaultValue={field.value}
                 >
                   <SelectTrigger className="input capitalize">
                     <SelectValue placeholder="Select the Voice" />
                   </SelectTrigger>
                   <SelectContent>
-                      <SelectItem className="capitalize"  value={'formal'}>
-                        Formal
-                      </SelectItem>
-                      <SelectItem className="capitalize"  value={'casual'}>
-                        Casual
-                      </SelectItem>
+                    <SelectItem className="capitalize" value={"formal"}>
+                      Formal
+                    </SelectItem>
+                    <SelectItem className="capitalize" value={"casual"}>
+                      Casual
+                    </SelectItem>
                   </SelectContent>
                 </Select>
               </FormControl>

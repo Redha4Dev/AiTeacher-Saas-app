@@ -40,8 +40,8 @@ const CompanionsList = ({
                 <Link href={`/companions/${id}`}>
                   <div className="flex items-center gap-2">
                     <div
-                      className="size-[72px] flex items-center justify-center rounded-lg max-md:hidden"
-                      style={{ backgroundColor: getSubjectColor(subject) }}
+                      className="size-[72px] flex bg-primary items-center justify-center rounded-lg max-md:hidden"
+                      //style={{ backgroundColor: getSubjectColor(subject) }}
                     >
                       <Image
                         src={`/icons/${subject}.svg`}
@@ -76,8 +76,7 @@ const CompanionsList = ({
               <TableCell>
                 <div className="flex items-center justify-end gap-2 w-full">
                   <p className="text-2xl">
-                    {duration}{" "}
-                    <span className="max-md:hidden">minutes</span>
+                    {duration} <span className="max-md:hidden">minutes</span>
                   </p>
                   <Image
                     src="/icons/clock.svg"

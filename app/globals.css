@@ -5,7 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --primary: #20CF72;
+  --primary: #20cf72;
 
   --cta: #2c2c2c;
   --cta-blue: rgb(103, 132, 250);
@@ -38,7 +38,7 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
-  --background: oklch(96.115% 0.00011 271.152);
+  --background: oklch(100% 0.00011 271.152);
   --foreground: oklch(0.145 0 0);
 }
 
@@ -176,14 +176,14 @@ body {
     @apply border border-black rounded-4xl px-4 py-2.5 text-sm font-semibold flex items-center gap-2 cursor-pointer;
   }
   .companion-list {
-    @apply  border border-black px-7 pt-7 pb-10 max-lg:w-full bg-white;
+    @apply border border-black px-7 pt-7 pb-10 max-lg:w-full bg-white;
   }
   .companion-limit {
     @apply items-center justify-center flex flex-col gap-4 w-full min-2xl:w-1/2 pt-20 text-center;
   }
 
   .companion-section {
-    @apply border-2 border-orange-500 w-2/3 max-sm:w-full flex flex-col gap-4 justify-center items-center rounded-lg;
+    @apply border-2 border-green-500 w-2/3 max-sm:w-full flex flex-col gap-4 justify-center items-center rounded-lg;
   }
 
   .companion-avatar {
@@ -205,7 +205,7 @@ body {
   }
 
   .transcript {
-    @apply relative flex flex-col gap-4 w-full items-center pt-10 flex-grow overflow-hidden;
+    @apply relative flex flex-col gap-4 w-full items-center pt-10 flex-grow max-h-[200px];
   }
   .transcript-message {
     @apply overflow-y-auto w-full flex flex-col gap-4 max-sm:gap-2 pr-2 h-full text-2xl;
@@ -226,5 +226,7 @@ body {
 }
 
 .custom-shadow {
-  box-shadow: 4px 4px 0px 0px rgba(62,95, 65, 0.4), 8px 8px 0px 0px rgba(62,95, 65, 0.3), 12px 12px 0px 0px rgba(62,95, 65, 0.2) ;
+  box-shadow: 4px 4px 0px 0px rgba(62, 95, 65, 0.4),
+    8px 8px 0px 0px rgba(62, 95, 65, 0.3),
+    12px 12px 0px 0px rgba(62, 95, 65, 0.2);
 }
