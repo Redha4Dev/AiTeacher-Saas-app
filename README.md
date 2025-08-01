@@ -37,7 +37,7 @@ Whether you're revising a topic or learning something new, this platform simulat
 | **Next.js**    | React Framework                      |
 | **Tailwind CSS** | Styling Framework                  |
 | **ShadCN UI**  | Accessible UI Components             |
-| **Clerk**      | Authentication (OAuth, User Mgmt)    |
+| **Clerk**      | Authentication (OAuth, User Mgmt)/Belling (Precing Plans, Subscription)    |
 | **Vapi SDK**   | Voice AI Interaction                 |
 | **Supabase**   | Backend-as-a-Service (DB, Auth, Storage) |
 
